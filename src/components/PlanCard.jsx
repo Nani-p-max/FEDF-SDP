@@ -1,4 +1,6 @@
-function PlanCard({ plan, onSelect }) {
+import { memo } from 'react';
+
+const PlanCard = memo(function PlanCard({ plan, onSelect }) {
   return (
     <article className="plan-card">
       <h2>{plan.name}</h2>
@@ -9,6 +11,6 @@ function PlanCard({ plan, onSelect }) {
       <button onClick={() => onSelect(plan.id)}>Choose Plan</button>
     </article>
   );
-}
+});
 
 export default PlanCard;
